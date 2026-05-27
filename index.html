@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Anime TV</title>
+
+<style>
+
+body{
+    margin:0;
+    background:#000;
+    color:white;
+    font-family:Arial;
+}
+
+header{
+    background:#111;
+    padding:15px;
+    font-size:28px;
+    text-align:center;
+}
+
+video{
+    width:100%;
+    height:60vh;
+    background:black;
+}
+
+.episodes{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+    gap:10px;
+    padding:15px;
+}
+
+.episode{
+    background:#222;
+    padding:15px;
+    border-radius:10px;
+    text-align:center;
+    cursor:pointer;
+    font-size:20px;
+}
+
+.episode:hover{
+    background:#444;
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+Solo Leveling Hindi - Season 1
+</header>
+
+<video
+id="player"
+controls
+autoplay
+playsinline
+webkit-playsinline
+>
+<source
+src="https://hugh.cdn.rumble.cloud/video/fww1/b9/s8/2/6/L/n/w/6Lnwy.caa.mp4?u=0&b=0"
+type="video/mp4">
+</video>
+
+<div class="episodes">
+
+<div class="episode" onclick="playEpisode(1)">EP 1</div>
+<div class="episode" onclick="playEpisode(2)">EP 2</div>
+<div class="episode" onclick="playEpisode(3)">EP 3</div>
+<div class="episode" onclick="playEpisode(4)">EP 4</div>
+<div class="episode" onclick="playEpisode(5)">EP 5</div>
+<div class="episode" onclick="playEpisode(6)">EP 6</div>
+<div class="episode" onclick="playEpisode(7)">EP 7</div>
+<div class="episode" onclick="playEpisode(8)">EP 8</div>
+<div class="episode" onclick="playEpisode(9)">EP 9</div>
+<div class="episode" onclick="playEpisode(10)">EP 10</div>
+<div class="episode" onclick="playEpisode(11)">EP 11</div>
+<div class="episode" onclick="playEpisode(12)">EP 12</div>
+
+</div>
+
+<script>
+
+const episodes = {
+
+1:"https://hugh.cdn.rumble.cloud/video/fww1/b9/s8/2/6/L/n/w/6Lnwy.caa.mp4?u=0&b=0",
+
+2:"https://hugh.cdn.rumble.cloud/video/fww1/63/s8/2/G/R/n/w/GRnwy.caa.mp4?u=0&b=0",
+
+3:"https://hugh.cdn.rumble.cloud/video/fww1/7e/s8/2/s/U/n/w/sUnwy.caa.mp4?u=0&b=0",
+
+4:"https://hugh.cdn.rumble.cloud/video/fww1/af/s8/2/Y/Z/n/w/YZnwy.caa.mp4?u=0&b=0",
+
+5:"https://hugh.cdn.rumble.cloud/video/fww1/40/s8/2/g/5/n/w/g5nwy.caa.mp4?u=0&b=0",
+
+6:"https://hugh.cdn.rumble.cloud/video/fww1/1d/s8/2/-/d/o/w/-dowy.caa.mp4?u=0&b=0",
+
+7:"https://hugh.cdn.rumble.cloud/video/fww1/2b/s8/2/c/h/o/w/chowy.caa.mp4?u=0&b=0",
+
+8:"https://hugh.cdn.rumble.cloud/video/fww1/61/s8/2/g/m/o/w/gmowy.caa.mp4?u=0&b=0",
+
+9:"https://hugh.cdn.rumble.cloud/video/fww1/8a/s8/2/4/q/o/w/4qowy.caa.mp4?u=0&b=0",
+
+10:"https://hugh.cdn.rumble.cloud/video/fww1/89/s8/2/e/z/o/w/ezowy.caa.mp4?u=0&b=0",
+
+11:"https://hugh.cdn.rumble.cloud/video/fww1/e7/s8/2/4/C/o/w/4Cowy.caa.mp4?u=0&b=0",
+
+12:"https://hugh.cdn.rumble.cloud/video/fww1/32/s8/2/0/L/o/w/0Lowy.caa.mp4?u=0&b=0"
+
+};
+
+function playEpisode(ep){
+
+var player =
+document.getElementById("player");
+
+player.src = episodes[ep];
+
+player.play();
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+}
+
+</script>
+
+</body>
+</html>
